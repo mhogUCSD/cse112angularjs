@@ -1,15 +1,48 @@
 <!doctype html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="phonecatApp">
 <head>
   <meta charset="utf-8">
-  <title>My HTML File</title>
+  <title>Google Phone Gallery</title>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="css/app.css">
   <script src="bower_components/angular/angular.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="http://code.angularjs.org/1.2.6/angular.min.js"></script>
 </head>
-<body>
+<body ng-controller="BGColorSel">
 
-  <p>Nothing here {{'yet' + '!'}}</p>
-	<p>1 + 2 = {{ 1 + 2 }}</p>
+    
+  <select ng-model="color">
+    <option value="#56a6ff"> Light Blue</option>
+    <option value="#4f4f4f"> Dark Grey</option>
+    <option value="#8b785a"> Hazel</option>
+    <option value="#5085bb"> Blue </option>
+  </select>
+    
+  <select ng-model="secondColor">
+    <option value="red"> Red</option>
+    <option value="green"> green</option>
+  </select>
+    
+  <select ng-model="thirdColor">
+    <option value="yellow"> yellow</option>
+    <option value="purple"> purple</option>
+  </select>
+    
+
+  <div ng-style="{background: color}" >
+    </BR></BR></BR></BR></BR>
+    <Center>
+    <h1>CSE 112 BlueJays</BR>
+    </H1></center></BR></BR></BR></BR></BR>
+  </div>
+
+  <div ng-style="{background: secondColor}">
+    Hello
+  </div>
+
+  <div ng-style="{background: thirdColor}">
+    Hi
+  </div>
 </body>
 </html>
